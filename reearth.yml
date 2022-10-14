@@ -1,0 +1,27 @@
+id: reearth-plugin-image360
+name: image360
+version: 0.0.1
+extensions:
+  - id: image360
+    type: block
+    name: image360 block
+    schema:
+      groups:
+        - id: default
+          fields:
+            - id: data1
+              type: url
+              title: Image URL
+              ui: image
+              availableIf:
+                field: style
+                type: string
+                value: image
+            - id: height
+              type: number
+              title: Height
+              defaultValue: 300
+            - id: width
+              type: number
+              title: Width
+              defaultValue: 400
